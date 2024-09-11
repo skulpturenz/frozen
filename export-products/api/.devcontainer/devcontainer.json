@@ -1,0 +1,15 @@
+{
+	"name": "Alpine Node",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--env-file",
+		".devcontainer/.env"
+	],
+	"containerEnv": {
+		"SERVICE_NAME": "frozen-export-products",
+		"NODE_ENV": "development"
+	},
+	"postStartCommand": "corepack pnpm install"
+}
